@@ -398,12 +398,14 @@ section h4{
     font-size: 2.5em;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    opacity: 1;
 }
 section p{
     font-weight: 300;
     color: #111111;
     letter-spacing: 1px;
     margin-bottom: 40px;
+    
 }
 
 .about h4::first-letter{
@@ -427,5 +429,45 @@ section p{
 }
 
 .about .img-box img{
-    max-width: 400;
+    max-width: 450px;
+}
+.about .img-box .corner-img{
+    position: absolute;
+    width: 15vw;
+    right: 10px;
+   bottom: -50px;
+}
+.section-bg-img{
+    position: absolute;
+    bottom: -10px;
+    right: 200px;
+    opacity: 0.2;
+    z-index: 100;
+    pointer-events: none;
+}
+.section-btn{
+    position: relative;
+    text-decoration: none;
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.section-btn:hover{
+    color: var(--primary);
+}
+.section-btn::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -10px;
+    width: 85%;
+    height: 1px;
+    background: #111111;
+    transition: 0.3s; 
+}
+.section-btn:hover::before{
+    left: 20%;
+    background: var(--primary);
 }
